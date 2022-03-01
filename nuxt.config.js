@@ -17,10 +17,13 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    {src:'element-ui/lib/theme-chalk/index.css'}
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src:'~plugins/element-ui', ssr: true },
     { src: '@/plugins/store', ssr: false }
   ],
 
