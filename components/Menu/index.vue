@@ -22,10 +22,6 @@
       </el-submenu>
       <el-menu-item index="4">
         <i class="el-icon-setting"></i>
-        <span slot="title"><nuxt-link to='/personal'>导航-test</nuxt-link></span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-setting"></i>
         <span slot="title"><nuxt-link to='/common'>导航-xx</nuxt-link></span>
       </el-menu-item>
     </el-menu>
