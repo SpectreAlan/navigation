@@ -1,5 +1,8 @@
 <template>
   <div class="default">
+    <ul class="bg-bubbles">
+      <li v-for="i in 10" :key="i"></li>
+    </ul>
     <div class="header">
       <div class="left">
         <div :class="['logo', collapse ? 'fold' : 'unfold']">
@@ -58,47 +61,5 @@ export default {
 </script>
 
 <style scoped lang="less">
-@import "static/css/reset.css";
-.default {
-  width: 100%;
-
-  .header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-    .left {
-      display: flex;
-      .el-menu{
-        border: none;
-        .el-menu-item{
-          margin-right: 20px;
-        }
-      }
-
-      .logo {
-        line-height: 60px;
-        display: flex;
-        justify-content: space-between;
-
-        img {
-          height: 40px;
-        }
-      }
-
-      .fold {
-        width: 64px;
-        img {
-          margin: 0 auto;
-        }
-      }
-
-      .unfold {
-        width: 200px;
-        padding: 0 20px;
-        box-sizing: border-box;
-      }
-    }
-  }
-}
+@import "static/css/default.less";
 </style>
