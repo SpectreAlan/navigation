@@ -4,7 +4,6 @@
       :collapse="collapse"
       default-active="2"
       class="menu-vertical"
-      background-color="aliceblue"
       @open="handleOpen"
       @close="handleClose">
       <el-menu-item>
@@ -47,10 +46,10 @@ export default {
 <style scoped lang="less">
 
 .side-menu {
-  background-color: aliceblue;
   transition: all 0.2s;
   .el-menu{
     border: none;
+    background-color: transparent;
     &:not(.el-menu--collapse) {
       width: 200px;
     }
