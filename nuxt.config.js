@@ -1,3 +1,4 @@
+const path = require('path')
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -25,7 +26,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src:'~plugins/element-ui', ssr: true },
-    { src: '@/plugins/store', ssr: false }
+    { src: '@/plugins/store', ssr: false },
+    '@/plugins/svg-icon'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -41,5 +43,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend (config,ctx) {
+      const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
+      svgRule.exclude = [path.resolve(__dirname, 'static/svg')]
+      config.module.rules.push({
+        test: /\.svg$/,
+        include: [path.resolve(__dirname, 'static/svg')],
+        use: [{ loader: 'svg-sprite-loader',options: {symbolId: 'icon-[name]'}}]
+      })
+    }
   }
 }
