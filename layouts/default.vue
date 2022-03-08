@@ -5,11 +5,6 @@
     </ul>
     <div class="header">
       <div class="left">
-        <div :class="['logo', collapse ? 'fold' : 'unfold']">
-          <svg-icon icon-class="logo" />
-          <span v-show="!collapse">喔喔搜酷</span>
-        </div>
-
         <el-menu mode="horizontal">
           <el-menu-item>
             <i :class="collapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'"
