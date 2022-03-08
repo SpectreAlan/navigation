@@ -4,7 +4,6 @@
       <li v-for="i in 10" :key="i"></li>
     </ul>
     <div class="header">
-      <div class="left">
         <el-menu mode="horizontal">
           <el-menu-item>
             <i :class="collapse ? 'el-icon-s-unfold' : 'el-icon-s-fold'"
@@ -27,11 +26,6 @@
             <a href="https://jszoo.com" target="_blank">关于</a>
           </el-menu-item>
         </el-menu>
-      </div>
-      <div class="right">
-        <span>每日一言</span>
-        <i class="el-icon-search"/>
-      </div>
     </div>
     <Nuxt/>
   </div>
