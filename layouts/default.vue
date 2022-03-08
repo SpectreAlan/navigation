@@ -6,7 +6,6 @@
     <div class="header">
       <div class="left">
         <div :class="['logo', collapse ? 'fold' : 'unfold']">
-<!--          <img src="../static/images/logo.png" alt="logo">-->
           <svg-icon icon-class="logo" />
           <span v-show="!collapse">喔喔搜酷</span>
         </div>
